@@ -104,6 +104,14 @@
                 .then(response => response.text())
                 .then(data => {
                     document.body.insertAdjacentHTML('beforeend', data);
+                    // Después de cargar el loader, espera un momento (puedes ajustar el tiempo según sea necesario)
+                    setTimeout(() => {
+                        // Oculta el loader
+                        document.querySelector('.loader-container').style.display = 'none';
+    
+                        // Muestra el contenido principal
+                        document.querySelector('main').style.display = 'block';
+                    }, 2000); // Ejemplo de espera de 2 segundos
                 })
                 .catch(error => console.error('Error al cargar el loader:', error));
         </script>
