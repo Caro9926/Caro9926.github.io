@@ -35,5 +35,5 @@ If you have any questions or comments, feel free to reach out:
 
 ---
 
-**Note:** This website was building based in the model of David Miller (https://github.com/startbootstrap/startbootstrap-personal)
+**Note:** This website was building based in the model of David Miller whose github is https://github.com/startbootstrap/startbootstrap-personal
 
