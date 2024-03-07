@@ -9,7 +9,7 @@ This repository contains the source code for my portfolio website, where I share
 - **index.html**: Main page of my portfolio.
 - **resume.html**: My resume.
 - **projects.html**: Information about some of the projects I've worked on.
-- **contact.html**: Contact form.
+- **resources.html**: Principal resources from GitHub.
 
 ## Technologies Used
 
@@ -21,7 +21,7 @@ This repository contains the source code for my portfolio website, where I share
 
 ## How to View My Portfolio
 
-You can visit my portfolio online [here](your-portfolio-link).
+You can visit my portfolio online [here](https://caro9926.github.io/).
 
 Enjoy exploring my work!
 
@@ -29,11 +29,11 @@ Enjoy exploring my work!
 
 If you have any questions or comments, feel free to reach out:
 
-- [Email](mailto:your@email.com)
-- [LinkedIn](https://www.linkedin.com/in/your-name)
-- [Twitter](https://twitter.com/your_handle)
+- [Email](mailto:carolinasaavedra01@email.com)
+- [LinkedIn](https://www.linkedin.com/in/carolina-saavedra-pena/)
+- [Twitter](https://twitter.com/Carito_1699)
 
 ---
 
-**Note:** Feel free to customize this README to fit your needs and add more sections if necessary.
+**Note:** This website was building based in the model of David Miller (https://github.com/startbootstrap/startbootstrap-personal)
 
