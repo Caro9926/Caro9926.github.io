@@ -104,23 +104,29 @@
         </script>
         <script>
             // Cargar y mostrar el loader desde loader.html
-            fetch('loader.html')
-                .then(response => response.text())
-                .then(html => {
-                    document.body.insertAdjacentHTML('afterbegin', html);
-                })
-                .then(() => {
-                    // Esperar hasta que la página principal esté completamente cargada
-                    window.addEventListener('load', function() {
-                        // Ocultar el loader
-                        const loaderContainer = document.querySelector(".loader-container");
-                        if (loaderContainer) {
-                            loaderContainer.style.display = "none";
-                        }
-                        // Mostrar el contenido principal
+            document.addEventListener('DOMContentLoaded', function() {
+                fetch('loader.html')
+                    .then(response => response.text())
+                    .then(html => {
+                        document.body.insertAdjacentHTML('afterbegin', html);
+    
+                        // Mostrar el contenido principal después de cargar el loader
+                        window.addEventListener('load', function() {
+                            // Ocultar el loader
+                            const loaderContainer = document.querySelector(".loader-container");
+                            if (loaderContainer) {
+                                loaderContainer.remove();  // Eliminar el loader
+                            }
+                            // Mostrar el contenido principal
+                            document.getElementById("content").style.display = "block";
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error al cargar el loader:', error);
+                        // Si falla la carga del loader, mostrar el contenido principal de todos modos
                         document.getElementById("content").style.display = "block";
                     });
-                });
+            });
         </script>
 
     </body>
