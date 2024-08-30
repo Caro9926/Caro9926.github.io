@@ -8140,6 +8140,9 @@ textarea.form-control-lg {
   text-align: right !important;
 }
 
+.text-container {
+  text-align: justify;
+}
 .text-center {
   text-align: center !important;
 }
