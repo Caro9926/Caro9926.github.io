@@ -11606,7 +11606,6 @@ html {
   position: absolute;
   bottom: 0;
   left: 50%;
-  object-position: center;
   transform: translateX(-50%);
 }
 .profile .dots-1 {
