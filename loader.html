@@ -14,16 +14,55 @@
             #ddd;
             animation: l10 2s infinite steps(6);
         }
+
         @keyframes l10 {
             100% {background-size:120% 120%}
         }
 
-        /* Centrar el loader en la página */
+        /* Centrar el loader en la página y cubrir toda la pantalla */
         .loader-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            z-index: 9999; /* Asegura que esté por encima de todo el contenido */
+        }
+
+        body.loading {
+            overflow: hidden; /* Evita que la página sea desplazable mientras carga */
+        }
+
+        /* Contenido principal oculto mientras el loader está activo */
+        body.loading .content {
+            display: none;
         }
     </style>
 </head>
+<body class="loading">
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+
+    <div class="content">
+        <!-- Aquí podrías agregar contenido de prueba -->
+        <h1>Contenido de prueba para después del loader</h1>
+        <p>Este contenido se mostrará una vez que se haya ocultado el loader.</p>
+    </div>
+
+    <script>
+        // Simula la carga de la página y oculta el loader después de 3 segundos
+        window.onload = function() {
+            setTimeout(function() {
+                document.querySelector(".loader-container").style.display = "none";
+                document.body.classList.remove("loading");
+            }, 3000); // 3000 milisegundos = 3 segundos
+        };
+    </script>
+</body>
+</html>
+
