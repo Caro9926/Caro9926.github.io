@@ -1,12 +1,10 @@
-<!-- loader.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-    
-            .loader {
+    <style>
+        .loader {
             width: 120px;
             height: 60px;
             border-radius: 200px 200px 0 0;
@@ -15,26 +13,17 @@
             radial-gradient(farthest-side at bottom,#514b82 0 95%,#0000 0) bottom/0% 0% no-repeat
             #ddd;
             animation: l10 2s infinite steps(6);
-            }
-            @keyframes l10 {
-                100% {background-size:120% 120%}
-            }
+        }
+        @keyframes l10 {
+            100% {background-size:120% 120%}
+        }
 
-            /* Centrar el loader en la página */
-            .loader-container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-            }
-        </style>
+        /* Centrar el loader en la página */
+        .loader-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
 </head>
-<body>
-    <div class="loader-container">
-        <div class="loader"></div>
-    </div>
-</body>
-</head>
-
-</html>
-
