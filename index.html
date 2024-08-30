@@ -103,32 +103,12 @@
 
         </script>
          <script>
-            // Cuando el DOM esté listo, cargamos el loader
-            document.addEventListener('DOMContentLoaded', function() {
-                fetch('loader.html')
-                    .then(response => response.text())
-                    .then(html => {
-                        // Insertar el loader al inicio del body
-                        document.body.insertAdjacentHTML('afterbegin', html);
-    
-                        // Esperar a que todo el contenido de la página cargue
-                        window.addEventListener('load', function() {
-                            // Ocultar el loader y mostrar el contenido principal
-                            const loaderContainer = document.querySelector(".loader-container");
-                            if (loaderContainer) {
-                                loaderContainer.style.opacity = 0; // Fade out
-                                setTimeout(function() {
-                                    loaderContainer.remove();
-                                    document.getElementById("content").style.display = "block";
-                                }, 500); // Esperar 500ms para que termine el fade out
-                            }
-                        });
-                    })
-                    .catch(error => {
-                        console.error('Error al cargar el loader:', error);
-                        // Mostrar el contenido principal en caso de error
-                        document.getElementById("content").style.display = "block";
-                    });
+            // Esperar a que la página y todos sus recursos se carguen
+            window.addEventListener('load', function() {
+                // Ocultar el loader y mostrar el contenido principal
+                const loaderContainer = document.querySelector(".loader-container");
+                loaderContainer.style.display = "none";
+                document.getElementById("content").style.display = "block";
             });
         </script>
 
