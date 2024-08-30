@@ -102,28 +102,31 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js">
 
         </script>
-        <script>
-            // Cargar y mostrar el loader desde loader.html
+         <script>
+            // Cuando el DOM esté listo, cargamos el loader
             document.addEventListener('DOMContentLoaded', function() {
                 fetch('loader.html')
                     .then(response => response.text())
                     .then(html => {
+                        // Insertar el loader al inicio del body
                         document.body.insertAdjacentHTML('afterbegin', html);
     
-                        // Mostrar el contenido principal después de cargar el loader
+                        // Esperar a que todo el contenido de la página cargue
                         window.addEventListener('load', function() {
-                            // Ocultar el loader
+                            // Ocultar el loader y mostrar el contenido principal
                             const loaderContainer = document.querySelector(".loader-container");
                             if (loaderContainer) {
-                                loaderContainer.remove();  // Eliminar el loader
+                                loaderContainer.style.opacity = 0; // Fade out
+                                setTimeout(function() {
+                                    loaderContainer.remove();
+                                    document.getElementById("content").style.display = "block";
+                                }, 500); // Esperar 500ms para que termine el fade out
                             }
-                            // Mostrar el contenido principal
-                            document.getElementById("content").style.display = "block";
                         });
                     })
                     .catch(error => {
                         console.error('Error al cargar el loader:', error);
-                        // Si falla la carga del loader, mostrar el contenido principal de todos modos
+                        // Mostrar el contenido principal en caso de error
                         document.getElementById("content").style.display = "block";
                     });
             });
