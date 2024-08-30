@@ -11629,7 +11629,7 @@ html {
     width: 50vw;
   }
   .profile .profile-img {
-    height: 55vw;
+    height: 35vw;
   }
   
 }
@@ -11639,17 +11639,17 @@ html {
     width: 40vw;
   }
   .profile .profile-img {
-    height: 45vw;
+    height: 35vw;
   }
   
 }
 @media (min-width: 1200px) {
   .profile {
     height: 35vw;
-    width: 35vw;
+    width: 25vw;
   }
   .profile .profile-img {
-    height: 40vw;
+    height: 35vw;
   }
   
 }
