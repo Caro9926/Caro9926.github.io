@@ -602,7 +602,11 @@ progress {
   height: auto;
 }
 
-
+.img-fluid2 {
+  max-width: 45%;
+  height: auto;
+  border-radius: 10px;
+}
 
 .img-thumbnail {
   padding: 0.25rem;
