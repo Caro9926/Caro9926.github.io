@@ -133,7 +133,7 @@ h2, .h2 {
 }
 @media (min-width: 1200px) {
   h2, .h2 {
-    font-size: 2rem;
+    font-size:clamp(1.2rem, 1.5vw + 1rem, 2rem); 
   }
 }
 
@@ -8119,7 +8119,7 @@ textarea.form-control-lg {
 }
 
 .fw-bolder {
-  font-weight: bolder !important;
+  font-weight: bolder !important; 
 }
 
 .lh-1 {
