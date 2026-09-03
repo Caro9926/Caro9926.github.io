@@ -1,0 +1,123 @@
+/* =========================================================
+   investigacion.css — estilos exclusivos de la página Investigación
+   (styles.css sigue siendo el compartido: nav, footer, paleta, etc.)
+   ========================================================= */
+
+/* ---------- Fondo: la cocina ---------- */
+body.has-backdrop { background: transparent; }
+
+.page-backdrop {
+  position: fixed;
+  inset: 0;
+  background-image: url('research-fondo.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+.page-backdrop::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--bg);
+  opacity: 0.82;
+}
+
+.page-header { max-width: 900px; }
+
+/* ---------- Grilla de recetas ---------- */
+main.recipes {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 1rem 2rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.75rem;
+}
+
+/* ---------- Tarjeta de receta ---------- */
+/* Nota: esta tarjeta es "papel" siempre claro, de día o de noche —
+   por eso los colores de texto van fijos (no var(--ink)/var(--muted)),
+   para que nunca pierdan contraste contra el fondo crema de la tarjeta. */
+.recipe-card {
+  position: relative;
+  background: #fdf8ee;
+  border: 1px solid rgba(58,50,34,0.14);
+  border-radius: 10px;
+  padding: 2rem 1.6rem 1.6rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.14);
+}
+
+.recipe-icon {
+  position: absolute;
+  top: -16px;
+  left: 1.6rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #b5652d;
+  color: #fdf8ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+/* Íconos de Bootstrap Icons ya disponibles (bootstrap-icons@1.8.1) para usar
+   en .recipe-icon cuando agregues más investigaciones — solo cambia la
+   clase "bi-nombre" dentro del <i> en el HTML. Ejemplos ya usados y otros
+   que te pueden servir:
+     bi-egg-fried          (usado en la tesis del dengue — algo "de campo")
+     bi-robot               (usado en Frida — IA / producto)
+     bi-graph-up             (análisis cuantitativo / econometría)
+     bi-clipboard-data        (encuestas / recolección de datos)
+     bi-droplet               (agua / saneamiento)
+     bi-globe-americas        (investigación regional / internacional)
+     bi-journal-text           (paper / publicación académica)
+     bi-bug                    (salud pública / epidemiología)
+     bi-mortarboard             (tesis / trabajo académico)
+     bi-lightbulb                (hallazgo / hipótesis)
+   Catálogo completo: https://icons.getbootstrap.com/ */
+
+.recipe-card h3 {
+  font-family: 'Source Serif 4', serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1.1rem;
+  color: #3a3222;
+}
+
+.recipe-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.6rem 0;
+  border-top: 1px dashed rgba(58,50,34,0.2);
+}
+.recipe-row:first-of-type { border-top: 1px dashed rgba(58,50,34,0.2); }
+
+.recipe-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6b7353;
+}
+.recipe-value {
+  font-size: 0.92rem;
+  color: #3a3222;
+}
+
+.recipe-link {
+  display: inline-block;
+  margin-top: 1.1rem;
+  font-size: 0.9rem;
+  color: #b5652d;
+  border-bottom: 1px solid rgba(181,101,45,0.35);
+}
+.recipe-link:hover { border-bottom-color: #b5652d; }
+
+@media (max-width: 480px) {
+  main.recipes { padding: 0.5rem 1.25rem 3rem; }
+  .page-header { padding: 2.5rem 1.25rem 1rem; }
+}

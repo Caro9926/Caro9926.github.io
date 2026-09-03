@@ -1,0 +1,107 @@
+/* =========================================================
+   code.css — estilos exclusivos de la página Código
+   (styles.css sigue siendo el compartido: nav, footer, paleta, etc.)
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+/* ---------- Fondo: el taller ---------- */
+body.has-backdrop { background: transparent; }
+
+.page-backdrop {
+  position: fixed;
+  inset: 0;
+  background-image: url('code_fondo.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+.page-backdrop::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--bg);
+  opacity: 0.82;
+}
+
+.page-header { max-width: 900px; }
+
+/* ---------- Secciones y grilla ---------- */
+main.code-sections {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 1rem 2rem 5rem;
+}
+
+.code-group { margin-bottom: 2.5rem; }
+.code-group h2 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--muted);
+  margin: 0 0 1.25rem;
+}
+.code-group h2::before { content: '# '; opacity: 0.6; }
+
+.code-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ---------- Tarjeta estilo terminal ---------- */
+.code-card {
+  background: #171310;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-left: 3px solid #4b8bbe;
+  border-radius: 6px;
+  padding: 1.5rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.code-card.lang-stata { border-left-color: #c0553f; }
+
+.code-card .path {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: #7fa66b;
+}
+.code-card h3 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f3ead9;
+  margin: 0;
+  line-height: 1.35;
+}
+.code-card p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #c9c2b2;
+  margin: 0;
+}
+.code-card .stack {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #c98a4b;
+}
+.code-card .gh-link {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  color: #e0954f;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+}
+.code-card .gh-link:hover { color: #f3ead9; }
+
+@media (max-width: 480px) {
+  main.code-sections { padding: 0.5rem 1.25rem 3rem; }
+  .page-header { padding: 2.5rem 1.25rem 1rem; }
+  .code-grid { grid-template-columns: 1fr; }
+}

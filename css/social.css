@@ -1,0 +1,106 @@
+/* =========================================================
+   social.css — estilos exclusivos de la página Social
+   (styles.css sigue siendo el compartido: nav, footer, paleta, etc.)
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+
+/* ---------- Fondo: el jardín ---------- */
+body.has-backdrop { background: transparent; }
+
+.page-backdrop {
+  position: fixed;
+  inset: 0;
+  background-image: url('jardin-fondo.png');
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+.page-backdrop::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--bg);
+  opacity: 0.82;
+}
+
+.page-header { max-width: 900px; }
+
+/* ---------- Postales ---------- */
+main.postcards {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 1rem 2rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.75rem;
+}
+
+.postcard {
+  position: relative;
+  background: #fdf8ee;
+  border: 1px dashed rgba(58,50,34,0.35);
+  border-radius: 4px;
+  padding: 1.6rem 1.6rem 1.4rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.14);
+  color: #3a3222;
+}
+
+.postcard .stamp {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
+  width: 46px;
+  height: 46px;
+  border: 2px solid #6b7353;
+  border-radius: 4px;
+  transform: rotate(5deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #6b7353;
+}
+.postcard .stamp i { font-size: 1rem; }
+
+.postcard .postmark {
+  font-family: 'Caveat', cursive;
+  font-size: 1.25rem;
+  color: #b5652d;
+  margin-bottom: 0.15rem;
+}
+
+.postcard h3 {
+  font-family: 'Source Serif 4', serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  margin: 0 0 0.7rem;
+  padding-right: 3rem;
+}
+
+.postcard p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.postcard .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.1rem;
+  font-size: 0.85rem;
+}
+.postcard .links a {
+  color: #b5652d;
+  border-bottom: 1px solid rgba(181,101,45,0.35);
+}
+.postcard .links a:hover { border-bottom-color: #b5652d; }
+
+@media (max-width: 480px) {
+  main.postcards { grid-template-columns: 1fr; padding: 0.5rem 1.25rem 3rem; gap: 1.25rem; }
+  .page-header { padding: 2.5rem 1.25rem 1rem; }
+}
