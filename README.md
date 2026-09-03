@@ -3,13 +3,18 @@
 Welcome to my personal portfolio!
 
 This repository contains the source code for my portfolio website, where I share information about myself, my experience, projects, and more.
-Este repositorio contiene la fuente de código de mi portafolio web me inspiré en la casa Sojo para el diseño de la ciudad de Sullan en Piura donde vivo. Cada habitación es un parte de mi trayectoria profesional
+
+The design is inspired by Casa Sojo, a historic house in Sullana, Piura, the city where I live. Each room represents a different part of my professional journey.
+
 ## Contents
 
-- *index.html*: Main page of my portfolio.
-- *resume.html*: My resume.
-- *projects.html*: Information about some of the projects I've worked on.
-- *resources.html*: Principal resources from GitHub.
+- *index.html*: Main page of my portfolio. Is the house, with each room linking to a section below.
+- *resume.html*: My experience, education, and skills.
+- *blog.html*: Articles and notes on public policy, applied research, and data.
+- *code.html*: Projects and scripts I've built, mostly in Python.
+- *social.html*: Volunteer and social impact projects I've been part of.
+- *investigacion.html*: Applied research I've worked on.
+- *interest.html*: Books and podcasts that have shaped me.
 
 ## Technologies Used
 
