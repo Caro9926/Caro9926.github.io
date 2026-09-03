@@ -22,7 +22,6 @@ The design is inspired by Casa Sojo, a historic house in Sullana,Piura. I am fro
 - CSS3
 - Bootstrap
 - JavaScript
-- Others...
 
 ## How to View My Portfolio
 
