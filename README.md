@@ -4,7 +4,7 @@ Welcome to my personal portfolio!
 
 This repository contains the source code for my portfolio website, where I share information about myself, my experience, projects, and more.
 
-The design is inspired by Casa Sojo, a historic house in Sullana, Piura, the city where I live. Each room represents a different part of my professional journey.
+The design is inspired by Casa Sojo, a historic house in Sullana,Piura. I am from Piura, Peru and it is where I live. Each room represents a different part of my professional journey.
 
 ## Contents
 
