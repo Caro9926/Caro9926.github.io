@@ -36,7 +36,3 @@ If you have any questions or comments, feel free to reach out:
 - [Email](mailto:carolinasaavedra01@gmail.com)
 - [LinkedIn](https://www.linkedin.com/in/carolina-saavedra-pena/)
 - [Twitter](https://twitter.com/Carito_1699)
-
-- [Email](mailto:carolinasaavedra01@gmail.com)
-- [LinkedIn](https://www.linkedin.com/in/carolina-saavedra-pena/)
-- [Twitter](https://twitter.com/Carito_1699)
