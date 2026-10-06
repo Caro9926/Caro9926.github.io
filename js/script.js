@@ -27,6 +27,9 @@
     document.querySelectorAll('[data-' + lang + ']').forEach((el) => {
       el.textContent = el.getAttribute('data-' + lang);
     });
+    document.querySelectorAll('[data-aria-' + lang + ']').forEach((el) => {
+      el.setAttribute('aria-label', el.getAttribute('data-aria-' + lang));
+    });
     document.querySelectorAll('.lang-switch button').forEach((btn) => {
       btn.classList.toggle('active', btn.dataset.lang === lang);
     });
@@ -41,12 +44,6 @@
 
   document.querySelectorAll('.lang-switch button').forEach((btn) => {
     btn.addEventListener('click', () => applyLang(btn.dataset.lang));
-  });
-
-  document.querySelectorAll('.hotspot[data-href]').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      window.location.href = btn.dataset.href;
-    });
   });
 
   // Menú mobile (hamburguesa)
