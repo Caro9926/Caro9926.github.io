@@ -211,7 +211,7 @@ nav.site-nav a.nav-link.active { color: var(--accent); }
 .hs-home           { top: 44%; left: 40%; width: 20%; height: 45%; }
 
 .hs-casa           { top: 90%; left: 35%; width: 36%; height: 8%; }
-.lbl-casa          { top: 85.5%; left: 32.25%; width: 36.5%; height: 8%; font-size: clamp(0.35rem, 1.3vw, 0.85rem); }
+.lbl-casa          { top: 85.5%; left: 32.25%; width: 36.5%; height: 8%; font-size: clamp(0.35rem, 1.3vw, 0.85rem); line-height: 1.1; }
 
 /* Coordenadas en % — modo noche, SOLO para lo que se corra respecto al día.
    Cada regla de acá pisa a la de arriba, únicamente cuando data-theme="dark".
@@ -231,6 +231,51 @@ nav.site-nav a.nav-link.active { color: var(--accent); }
 /* [data-theme="dark"] .hs-home           { top: ...; left: ...; } */
 [data-theme="dark"] .lbl-casa          { top: 86.5%; left: 33.45%; font-size: clamp(0.55rem, 1.2vw, 0.75rem); }
 /* [data-theme="dark"] .hs-casa           { top: ...; left: ...; } */
+
+/* Tamaño de letra de las placas — SOLO celular (en web no cambia nada).
+   Van en vw para que se encojan junto con la casa. Súbelos o bájalos a gusto. */
+@media (max-width: 760px) {
+  .lbl-habilidades,
+  .lbl-proyectos,
+  .lbl-sobremi       { font-size: 1.15vw; }
+  .lbl-investigacion { font-size: 0.85vw; }
+  /* Nombre en dos líneas: que entre en la placa también en modo noche */
+  .lbl-casa,
+  [data-theme="dark"] .lbl-casa { font-size: 1.4vw; }
+}
+
+/* ---------- Lista de habitaciones (index.html, solo celular) ---------- */
+.room-list { display: none; }
+
+@media (max-width: 760px) {
+  .room-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+    padding: 1.5rem 1.25rem 2rem;
+  }
+  .room-list h2 {
+    grid-column: 1 / -1;
+    margin: 0 0 0.2rem;
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.15rem;
+    text-align: center;
+  }
+  .room-list a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    min-height: 52px;
+    padding: 0.7rem 0.9rem;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .room-list a:first-of-type { grid-column: 1 / -1; }
+  .room-list a i { color: var(--accent); font-size: 1.15rem; }
+}
 
 /* ---------- Page header (usado en blog.html y páginas de sección) ---------- */
 .page-header {
